@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/common/constants/app_strings.dart';
-import 'package:movie_app/features/login/presentation/page/login_page.dart';
+import 'package:movie_app/features/login/view/login_view.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -26,9 +28,13 @@ class App extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+        ),
       ),
-      home: const LoginPage(title: AppStrings.appName),
+      home: const LoginView(
+        title: AppStrings.appName,
+      ),
     );
   }
 }
